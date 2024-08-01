@@ -1,0 +1,13 @@
+/*MIXINS*/
+
+/*Imports necessários*/
+@import "comuns.scss";
+
+/*Mixin para display*/
+@mixin display($flex, $direction, $justify-content, $align-items, $gap){
+    display: $flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    gap: $gap;
+}

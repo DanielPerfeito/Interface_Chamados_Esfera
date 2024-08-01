@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Chamados</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Sistema de Chamados</h1>
+    
+    <button id="mostrar-formulario-criar">Novo Chamado</button>
+
+    <section id="secao-criar" style="display:none;">
+        <h2>Criar Chamado</h2>
+        <form id="formulario-criar">
+            <input type="text" id="campo-assunto" placeholder="Assunto" required>
+            <textarea id="campo-descricao" placeholder="Descrição" required></textarea>
+            <input type="text" id="campo-local" placeholder="Local" required>
+            <select id="campo-prioridade" required>
+                <option value="Baixa">Baixa</option>
+                <option value="Média">Média</option>
+                <option value="Alta">Alta</option>
+            </select>
+            <input type="file" id="campo-anexo">
+            <input type="email" id="campo-criado-por" placeholder="Criado por" required>
+            <button type="submit">Salvar</button>
+            <button type="button" id="cancelar-criacao">Cancelar</button>
+        </form>
+    </section>
+
+    <section id="secao-editar" style="display:none;">
+        <h2>Editar Chamado</h2>
+        <form id="formulario-editar">
+            <input type="text" id="campo-editar-assunto" placeholder="Assunto" required>
+            <textarea id="campo-editar-descricao" placeholder="Descrição" required></textarea>
+            <input type="text" id="campo-editar-local" placeholder="Local" required>
+            <select id="campo-editar-prioridade" required>
+                <option value="Baixa">Baixa</option>
+                <option value="Média">Média</option>
+                <option value="Alta">Alta</option>
+            </select>
+            <input type="file" id="campo-editar-anexo">
+            <input type="email" id="campo-editar-criado-por" placeholder="Criado por" required>
+            <button type="submit">Atualizar Chamado</button>
+            <button type="button" id="cancelar-edicao">Cancelar</button>
+        </form>
+    </section>
+
+    <section id="secao-visualizar" style="display:none;">
+        <h2>Detalhes do Chamado</h2>
+        <div id="detalhes-visualizar"></div>
+        <button onclick="fecharVisualizacao()">Fechar</button>
+    </section>
+
+    <section id="secao-lista">
+        <h2>Lista de Chamados</h2>
+        <ul id="lista-chamados"></ul>
+        <p id="mensagem-erro"></p>
+    </section>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/backend.js"></script>
+</body>
+</html>

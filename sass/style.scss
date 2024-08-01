@@ -1,0 +1,135 @@
+// styles.scss
+
+// Definindo variáveis
+$cor-primaria: #3498db;
+$cor-secundaria: #2ecc71;
+$cor-cancelar: #e74c3c;
+$cor-detalhes: #f39c12;
+$cor-fundo: #ecf0f1;
+$cor-texto: #2c3e50;
+$cor-borda: #bdc3c7;
+$espaco: 1rem;
+$largura-max: 1200px;
+
+// Estilizando o corpo
+body {
+  font-family: Arial, sans-serif;
+  background-color: $cor-fundo;
+  color: $cor-texto;
+  margin: 0;
+  padding: 0;
+}
+
+// Estilizando o cabeçalho
+h1 {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+// Estilizando o botão "Novo Chamado"
+#mostrar-formulario-criar {
+  background-color: $cor-primaria;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($cor-primaria, 10%);
+  }
+}
+
+// Estilizando o botão "Detalhes"
+button {
+  background-color: $cor-detalhes;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  margin-left: 0.5rem;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($cor-detalhes, 10%);
+  }
+}
+
+// Estilizando o botão "Cancelar"
+#cancelar-criacao, #cancelar-edicao {
+  background-color: $cor-cancelar;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($cor-cancelar, 10%);
+  }
+}
+
+// Estilizando o formulário
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: $largura-max;
+  width: 100%;
+  background-color: #fff;
+  padding: $espaco;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: $espaco;
+
+  input, textarea, select {
+    margin-bottom: $espaco;
+    padding: 0.5rem;
+    border: 1px solid $cor-borda;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  button {
+    background-color: $cor-primaria;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($cor-primaria, 10%);
+    }
+  }
+
+  input[type="file"] {
+    padding: 0.5rem 0;
+  }
+}
+
+// Estilizando a lista de chamados
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    border-bottom: 1px solid $cor-borda;
+    padding: $espaco;
+    margin-bottom: $espaco;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

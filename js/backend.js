@@ -83,14 +83,16 @@ function buscarDetalhesChamado(id, modo = 'visualizar') {
     .then(data => {
         if (modo === 'visualizar') {
             document.getElementById('detalhes-visualizar').innerHTML = `
-                <p>Assunto: ${data.assunto}</p>
-                <p>Descrição: ${data.descricao}</p>
-                <p>Local: ${data.local}</p>
-                <p>Prioridade: ${data.prioridade}</p>
-                <p>Criado por: ${data.criado_por}</p>
-                <p>Anexo: <a href="https://backchamadoentrevista.esferasolutions.com.br/chamados/download/${data.anexo}" target="_blank">${data.anexo}</a></p>
-                <button onclick="mostrarFormularioEdicao(${data.id})">Editar</button>
+                <p class="item-detalhe"><strong><i class="bi bi-flag-fill"></i> Assunto:</strong> ${data.assunto}</p>
+                <p class="item-detalhe"><strong><i class="bi bi-file-text-fill"></i> Descrição:</strong> ${data.descricao}</p>
+                <p class="item-detalhe"><strong><i class="bi bi-geo-alt-fill"></i> Local:</strong> ${data.local}</p>
+                <p class="item-detalhe"><strong><i class="bi bi-exclamation-triangle-fill"></i> Prioridade:</strong> ${data.prioridade}</p>
+                <p class="item-detalhe"><strong><i class="bi bi-person-fill"></i> Criado por:</strong> ${data.criado_por}</p>
+                <p class="item-detalhe"><strong><i class="bi bi-file-earmark-arrow-down-fill"></i> Anexo:</strong> <a href="https://backchamadoentrevista.esferasolutions.com.br/chamados/download/${data.anexo}" target="_blank">${data.anexo}</a></p>
+               
             `;
+            document.getElementById('div-btn-visualizar-editar').innerHTML = `<button onclick="mostrarFormularioEdicao(${data.id})" class="btn btn-editar">Editar <i class="bi bi-pencil-fill"></i></button>`
+
             document.getElementById('secao-visualizar').style.display = 'block';
             document.getElementById('secao-editar').style.display = 'none';
         } else if (modo === 'editar') {

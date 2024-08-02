@@ -35,6 +35,7 @@
   box-sizing: border-box;
 }
 
+/*Área do cabeçalho*/
 #cabecalho {
   display: flex;
   flex-direction: row;
@@ -44,7 +45,8 @@
   width: 100%;
   background-color: #54668e;
   padding: 15px;
-  /*Token*/
+  /*Imagem Logo*/
+  /*Div do Token*/
 }
 @media screen and (max-width: 760px) {
   #cabecalho {
@@ -114,7 +116,7 @@
   }
 }
 
-/*SEÇÃO DE CRIAÇÃO DE NOVOS CHAMADO*/
+/*ÁREA DE CRIAÇÃO E EDIÇÃO DE CHAMADOS*/
 /*Imports Necessários*/
 /*ESTILOS COMUNS*/
 /*Imports necessário*/
@@ -140,7 +142,7 @@
   background-color: #f5810c;
 }
 
-/*Area do formulário de criação de novos chamados*/
+/*Seções dos formulários de criação e edição de chamados*/
 #secao-criar, #secao-editar {
   display: flex;
   flex-direction: column;
@@ -150,7 +152,7 @@
   border: solid 2px rgba(84, 102, 142, 0.4431372549);
   border-radius: 15px;
   padding: 30px;
-  /*Formulário de criação de novos chamado*/
+  /*Formulários*/
 }
 #secao-criar h2, #secao-editar h2 {
   text-align: center;
@@ -169,7 +171,7 @@
   gap: 10px;
   width: 600px;
   /*Divs dos campos do formulário*/
-  /*Div botões do formulário*/
+  /*Div dos botões dos formulários*/
 }
 @media screen and (max-width: 760px) {
   #secao-criar #formulario-criar, #secao-criar #formulario-editar, #secao-editar #formulario-criar, #secao-editar #formulario-editar {
@@ -210,6 +212,8 @@
   gap: 15px;
   width: 100%;
   padding-top: 20px;
+  /*Botões para cancelar criação e edição de um chamado*/
+  /*botões para salvar e atualizar um chamado*/
 }
 #secao-criar #formulario-criar .div-btn-form button, #secao-criar #formulario-editar .div-btn-form button, #secao-editar #formulario-criar .div-btn-form button, #secao-editar #formulario-editar .div-btn-form button {
   width: 50%;
@@ -236,6 +240,104 @@
   background-color: #3a4675;
 }
 
+/*AREA VISUALIZAÇÃO DE CHAMADOS*/
+/*Imports Necessários*/
+/*ESTILOS COMUNS*/
+/*Imports necessário*/
+/*Variáves*/
+/*Gerais*/
+*, p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Seção de visualização de chamados*/
+#secao-visualizar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff;
+  width: 600px;
+  padding: 30px;
+  border: solid 2px rgba(84, 102, 142, 0.4431372549);
+  border-radius: 15px;
+  /*Area de exibição dos detalhes do chamado*/
+  /*Div do botões/submit*/
+}
+@media screen and (max-width: 760px) {
+  #secao-visualizar {
+    width: 400px;
+  }
+}
+#secao-visualizar h2 {
+  text-align: center;
+  margin: 10px 0 30px;
+  color: #3a4675;
+}
+@media screen and (max-width: 760px) {
+  #secao-visualizar h2 {
+    font-size: 1.5rem;
+  }
+}
+#secao-visualizar #detalhes-visualizar {
+  background-color: rgba(84, 102, 142, 0.1725490196);
+  border: solid 2px rgba(84, 102, 142, 0.4431372549);
+  border-radius: 15px;
+  padding: 10px;
+}
+#secao-visualizar #detalhes-visualizar p {
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 760px) {
+  #secao-visualizar #detalhes-visualizar p {
+    font-size: 1rem;
+  }
+}
+#secao-visualizar #detalhes-visualizar p strong i {
+  color: #3a4675;
+}
+#secao-visualizar #div-btn-visualizar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 50px 0px 10px;
+  /*Botão de fechar a visualização de detalhes*/
+  /*Div do botão editar*/
+}
+#secao-visualizar #div-btn-visualizar .btn-fechar {
+  width: 50%;
+  color: #54668e;
+  font-weight: bold;
+  border: solid 1px rgba(84, 102, 142, 0.4431372549);
+}
+#secao-visualizar #div-btn-visualizar .btn-fechar:hover {
+  background-color: rgba(84, 102, 142, 0.4431372549);
+  color: #3a4675;
+  border: none;
+}
+#secao-visualizar #div-btn-visualizar #div-btn-visualizar-editar {
+  width: 50%;
+  /*Botão para editar os detalhes de um chamado*/
+}
+#secao-visualizar #div-btn-visualizar #div-btn-visualizar-editar .btn-editar {
+  width: 100%;
+  border: solid 1px rgba(84, 102, 142, 0.4431372549);
+  color: #54668e;
+  font-weight: bold;
+  transition: 0.2s;
+}
+#secao-visualizar #div-btn-visualizar #div-btn-visualizar-editar .btn-editar:hover {
+  background-color: rgba(84, 102, 142, 0.4431372549);
+  color: #3a4675;
+  border: none;
+}
+
+/*Estilo base*/
 body {
   display: flex;
   flex-direction: column;

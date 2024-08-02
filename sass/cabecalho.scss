@@ -3,6 +3,7 @@
 /*Imports necessários*/
 @import "comuns.scss";
 
+/*Área do cabeçalho*/
 #cabecalho{
     @include display (flex, row, center, center, 50px);
     width: 100%;
@@ -13,7 +14,7 @@
         @include display(flex, column, center, center, 5px);
         padding: 10px;
     }
-
+    /*Imagem Logo*/
     img{
         width: 200px;
         border-right: solid 4px $cor-clara;
@@ -31,10 +32,9 @@
             border-top: solid 4px $cor-clara;
             padding-top: 10px;
         }
-
     }
     
-    /*Token*/
+    /*Div do Token*/
     #div-token{
         @include display (flex, column, center, start, 5px);
         font-weight: bold;

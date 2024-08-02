@@ -2,8 +2,11 @@
 @import "comuns.scss";
 @import "mixins.scss";
 @import "cabecalho.scss";
-@import "criar_chamado.scss";
+@import "area-formularios.scss";
+@import "area-visualizar.scss";
 
+
+/*Estilo base*/
 body{
     @include display(flex, column, center, center, 30px);
 }

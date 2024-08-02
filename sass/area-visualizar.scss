@@ -1,0 +1,87 @@
+/*AREA VISUALIZAÇÃO DE CHAMADOS*/
+
+/*Imports Necessários*/
+@import "comuns.scss";
+
+/*Seção de visualização de chamados*/
+#secao-visualizar {
+    @include display (flex, column, center, center, 10px);
+    background-color: $cor-clara;
+    width: 600px;
+    padding: 30px;
+    border: solid 2px $cor-placeholder;
+    border-radius: 15px;
+
+    @media screen and (max-width:760px) {
+        width: 400px;
+    }
+
+    h2 {
+        text-align: center;
+        margin: 10px 0 30px;
+        color: $cor-secundaria;
+
+        @media screen and (max-width:760px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    /*Area de exibição dos detalhes do chamado*/
+    #detalhes-visualizar {
+        background-color: $cor-placeholder-2;
+        border: solid 2px $cor-placeholder;
+        border-radius: 15px;
+        padding: 10px;
+
+        p {
+            font-size: 1.2rem;
+
+            @media screen and (max-width:760px) {
+                font-size: 1rem;
+            }
+
+            strong {
+                i {
+                    color: $cor-secundaria;
+                }
+            }
+        }
+    }
+    /*Div do botões/submit*/
+    #div-btn-visualizar {
+        @include display (flex, row, center, center, 10px);
+        margin: 50px 0px 10px;
+        /*Botão de fechar a visualização de detalhes*/
+        .btn-fechar {
+            width: 50%;
+            color: $cor-primaria;
+            font-weight: bold;
+            border: solid 1px $cor-placeholder;
+
+            &:hover {
+                background-color: $cor-placeholder;
+                color: $cor-secundaria;
+                border: none;
+            }
+
+        }
+        /*Div do botão editar*/
+        #div-btn-visualizar-editar {
+            width: 50%;
+            /*Botão para editar os detalhes de um chamado*/
+            .btn-editar {
+                width: 100%;
+                border: solid 1px $cor-placeholder;
+                color: $cor-primaria;
+                font-weight: bold;
+                transition: .2s;
+
+                &:hover {
+                    background-color: $cor-placeholder;
+                    color: $cor-secundaria;
+                    border: none;
+                }
+            }
+        }
+    }
+}

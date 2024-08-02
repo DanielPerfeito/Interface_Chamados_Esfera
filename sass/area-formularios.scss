@@ -1,4 +1,4 @@
-/*SEÇÃO DE CRIAÇÃO DE NOVOS CHAMADO*/
+/*ÁREA DE CRIAÇÃO E EDIÇÃO DE CHAMADOS*/
 
 /*Imports Necessários*/
 @import "comuns.scss";
@@ -18,14 +18,13 @@
     }
 }
 
-/*Area do formulário de criação de novos chamados*/
+/*Seções dos formulários de criação e edição de chamados*/
 #secao-criar, #secao-editar{
     @include display(flex, column, center, center,10px);
     border: solid 2px $cor-placeholder;
     border-radius: 15px;
     padding: 30px;
     
-
     h2{
         text-align: center;
         color: $cor-secundaria;
@@ -37,7 +36,7 @@
         color: red;
     }
 
-    /*Formulário de criação de novos chamado*/
+    /*Formulários*/
     #formulario-criar, #formulario-editar{
         @include display(flex, column, center, center,10px);
         width: 600px;
@@ -70,7 +69,7 @@
                 }
             }
         }
-        /*Div botões do formulário*/
+        /*Div dos botões dos formulários*/
         .div-btn-form{
             @include display(flex, row, center, center, 15px);
             width: 100%;
@@ -81,7 +80,7 @@
                 font-size: 1.2rem;
                 font-weight: bold;
             }
-
+            /*Botões para cancelar criação e edição de um chamado*/
             #cancelar-criacao, #cancelar-edicao{
                 background-color: $cor-clara;
                 color: $cor-primaria;
@@ -94,7 +93,7 @@
                   border: none;
                 }
             }
-
+            /*botões para salvar e atualizar um chamado*/ 
             #salvar-criacao, #atualizar-edicao{
                 background-color: $cor-primaria;
                 color: $cor-clara;
@@ -106,5 +105,4 @@
             }
         }
     }
-
 }

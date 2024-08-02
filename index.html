@@ -25,24 +25,53 @@
     </header>
 
     <!--Botão para abrir o formulário de criação de novos chamados-->
-    <button id="mostrar-formulario-criar" class="btn">Novo Chamado <i class="bi bi-clipboard2-plus"></i></button>
+    <button id="mostrar-formulario-criar" class="btn">Novo Chamado <i class="bi bi-clipboard-plus"></i></button>
 
     <!--Seção de criação de novos chamados-->
-    <section id="secao-criar">
-        <h2 class="">Criar Chamado</h2>
+    <section id="secao-criar" style="display: none">
+        <h2 class="">Criar Chamado <i class="bi bi-clipboard-fill"></i></h2>
+        <span>OBS: Campos de preenchimento obrigatóra (*)</span>
+        <!--Formulário de criação de novos chamados-->
         <form id="formulario-criar">
-            <input type="text" id="campo-assunto" placeholder="Assunto" required>
-            <textarea id="campo-descricao" placeholder="Descrição" required></textarea>
-            <input type="text" id="campo-local" placeholder="Local" required>
-            <select id="campo-prioridade" required>
-                <option value="Baixa">Baixa</option>
-                <option value="Média">Média</option>
-                <option value="Alta">Alta</option>
-            </select>
-            <input type="file" id="campo-anexo">
-            <input type="email" id="campo-criado-por" placeholder="Criado por" required>
-            <button type="submit">Salvar</button>
-            <button type="button" id="cancelar-criacao">Cancelar</button>
+            <!--Assunto-->
+            <div class="div-campo-form">
+                <label for="campo-assunto">Assunto<span>*</span></label>
+                <input type="text" id="campo-assunto" class="form-control"  placeholder="ex: Servidor Inoperante" required>
+            </div>
+            <!--Descrição-->
+            <div class="div-campo-form">
+                <label for="campo-descricao">Descrição<span>*</span></label>
+                <textarea id="campo-descricao" class="form-control"  placeholder="ex: O servidor encontra-se offline desde ontem." required></textarea>
+            </div>
+            <!--Local-->
+            <div class="div-campo-form">
+                <label for="campo-local">Local<span>*</span></label>
+                <input type="text" id="campo-local" class="form-control"  placeholder="ex: Sala de servidores" required>
+            </div>
+            <!--Prioridade-->
+            <div class="div-campo-form">
+                <label for="campo-prioridade">Prioridade<span>*</span></label>
+                <select id="campo-prioridade" class="form-control"  required>
+                    <option value="Baixa">Baixa</option>
+                    <option value="Média">Média</option>
+                    <option value="Alta">Alta</option>
+                </select>
+            </div>
+            <!--Anexo-->
+            <div class="div-campo-form">
+                <label for="campo-anexo">Anexo</label>
+                <input type="file" id="campo-anexo" class="form-control">
+            </div>
+            <!--Email-->
+            <div class="div-campo-form">
+                <label for="campo-criado-por">Email do solicitante<span>*</span></label>
+                <input type="email" id="campo-criado-por" class="form-control"  placeholder="ex: solicitante@email.com" required>
+            </div>
+            <!--Botões/Submit-->
+            <div class="div-btn-form">
+                <button id="cancelar-criacao" class="btn" type="button" >Cancelar</button>
+                <button id="salvar-criacao" class="btn" type="submit">Salvar <i class="bi bi-floppy2-fill"></i></button>
+            </div>
         </form>
     </section>
 

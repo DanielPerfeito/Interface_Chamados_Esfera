@@ -11,9 +11,99 @@
     border-radius: 10px;
     font-size: 1.5rem;
     font-weight: bold;
-    transition: .2s;
+    transition: .4s;
 
     &:hover{
         background-color: $cor-call-to-action-hover;
     }
+}
+
+/*Area do formulário de criação de novos chamados*/
+#secao-criar{
+    @include display(flex, column, center, center,10px);
+    border: solid 2px $cor-placeholder;
+    border-radius: 15px;
+    padding: 30px;
+
+    h2{
+        text-align: center;
+        color: $cor-secundaria;
+    }
+
+    span{
+        display: block;
+        text-align: center;
+        color: red;
+    }
+
+    /*Formulário de criação de novos chamado*/
+    #formulario-criar{
+        @include display(flex, column, center, center,10px);
+        width: 600px;
+
+        @media screen and (max-width: 760px){
+            width: 400px;
+        }
+
+        /*Divs dos campos do formulário*/
+        .div-campo-form{
+            @include display(flex, column, center, start,0px);
+            width: 100%;
+
+            label{
+                @include display(flex, row, center, start,0);
+                color: $cor-secundaria;
+            }
+
+            input, select, textarea{
+                color: $cor-secundaria;
+
+                border: solid 2px $cor-placeholder;
+
+                &::placeholder{
+                    color: $cor-placeholder;
+                }
+
+                option{
+                    color: $cor-secundaria  
+                }
+            }
+        }
+        /*Div botões do formulário*/
+        .div-btn-form{
+            @include display(flex, row, center, center, 15px);
+            width: 100%;
+            padding-top: 20px;
+
+            button{
+                width: 50%;
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+
+            #cancelar-criacao{
+                background-color: $cor-clara;
+                color: $cor-primaria;
+                border: solid 1px $cor-placeholder;
+                transition: .3s;
+
+                &:hover{
+                  background-color: $cor-placeholder;
+                  color: $cor-secundaria;
+                  border: none;
+                }
+            }
+
+            #salvar-criacao{
+                background-color: $cor-primaria;
+                color: $cor-clara;
+                transition: .2s;
+
+                &:hover{
+                    background-color: $cor-secundaria;
+                }
+            }
+        }
+    }
+
 }

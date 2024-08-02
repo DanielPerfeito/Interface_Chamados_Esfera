@@ -41,6 +41,7 @@
   justify-content: center;
   align-items: center;
   gap: 50px;
+  width: 100%;
   background-color: #54668e;
   padding: 15px;
   /*Token*/
@@ -111,6 +112,40 @@
   #cabecalho #div-token #token {
     font-size: 0.9rem;
   }
+}
+
+/*SEÇÃO DE CRIAÇÃO DE NOVOS CHAMADO*/
+/*Imports Necessários*/
+/*ESTILOS COMUNS*/
+/*Imports necessário*/
+/*Variáves*/
+/*Gerais*/
+*, p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Botão para abrir o formulário de criação de novos chamados*/
+#mostrar-formulario-criar {
+  background-color: #f29a41;
+  color: #ffffff;
+  border: solid 3px #f29a41;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: 0.2s;
+}
+#mostrar-formulario-criar:hover {
+  background-color: #f5810c;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

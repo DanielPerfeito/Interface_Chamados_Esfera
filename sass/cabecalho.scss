@@ -5,7 +5,7 @@
 
 #cabecalho{
     @include display (flex, row, center, center, 50px);
-
+    width: 100%;
     background-color: $cor-primaria;
     padding: 15px;
 

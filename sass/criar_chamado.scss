@@ -1,0 +1,19 @@
+/*SEÇÃO DE CRIAÇÃO DE NOVOS CHAMADO*/
+
+/*Imports Necessários*/
+@import "comuns.scss";
+
+/*Botão para abrir o formulário de criação de novos chamados*/
+#mostrar-formulario-criar{
+    background-color: $cor-call-to-action;
+    color: $cor-clara;
+    border: solid 3px $cor-call-to-action;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: .2s;
+
+    &:hover{
+        background-color: $cor-call-to-action-hover;
+    }
+}

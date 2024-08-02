@@ -2,3 +2,8 @@
 @import "comuns.scss";
 @import "mixins.scss";
 @import "cabecalho.scss";
+@import "criar_chamado.scss";
+
+body{
+    @include display(flex, column, center, center, 30px);
+}

@@ -9,14 +9,29 @@
     background-color: $cor-primaria;
     padding: 15px;
 
+    @media screen and (max-width: 760px){
+        @include display(flex, column, center, center, 5px);
+        padding: 10px;
+    }
+
     img{
         width: 200px;
         border-right: solid 4px $cor-clara;
         padding-right: 30px;
+
+        @media screen and (max-width: 760px) {
+           border:none;
+        }
     }
 
     h1{
         color: $cor-clara;
+        @media screen and (max-width: 760px){
+            font-size: 1.6rem;
+            border-top: solid 4px $cor-clara;
+            padding-top: 10px;
+        }
+
     }
     
     /*Token*/
@@ -24,8 +39,16 @@
         @include display (flex, column, center, start, 5px);
         font-weight: bold;
 
+        @media screen and (max-width:760px){
+            @include display (flex, row, center, center, 10px);
+        }
+
         #label-token{
             color: $cor-clara;
+
+            @media screen and (max-width:760px){
+              font-size: .9rem;
+            }
         }
 
         #token{
@@ -34,7 +57,11 @@
             padding: 5px 8px;
             border-radius: 5px;
             box-shadow: inset 2px 2px 3px $cor-escura;
-            }
+
+            @media screen and (max-width:760px){
+                font-size: .9rem;
+              }
+        }
     
     }
 }

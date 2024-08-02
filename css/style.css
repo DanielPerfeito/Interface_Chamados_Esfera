@@ -45,13 +45,35 @@
   padding: 15px;
   /*Token*/
 }
+@media screen and (max-width: 760px) {
+  #cabecalho {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+  }
+}
 #cabecalho img {
   width: 200px;
   border-right: solid 4px #ffffff;
   padding-right: 30px;
 }
+@media screen and (max-width: 760px) {
+  #cabecalho img {
+    border: none;
+  }
+}
 #cabecalho h1 {
   color: #ffffff;
+}
+@media screen and (max-width: 760px) {
+  #cabecalho h1 {
+    font-size: 1.6rem;
+    border-top: solid 4px #ffffff;
+    padding-top: 10px;
+  }
 }
 #cabecalho #div-token {
   display: flex;
@@ -61,8 +83,22 @@
   gap: 5px;
   font-weight: bold;
 }
+@media screen and (max-width: 760px) {
+  #cabecalho #div-token {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
 #cabecalho #div-token #label-token {
   color: #ffffff;
+}
+@media screen and (max-width: 760px) {
+  #cabecalho #div-token #label-token {
+    font-size: 0.9rem;
+  }
 }
 #cabecalho #div-token #token {
   color: #000000;
@@ -70,6 +106,11 @@
   padding: 5px 8px;
   border-radius: 5px;
   box-shadow: inset 2px 2px 3px #000000;
+}
+@media screen and (max-width: 760px) {
+  #cabecalho #div-token #token {
+    font-size: 0.9rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

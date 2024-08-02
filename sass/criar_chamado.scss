@@ -19,11 +19,12 @@
 }
 
 /*Area do formulário de criação de novos chamados*/
-#secao-criar{
+#secao-criar, #secao-editar{
     @include display(flex, column, center, center,10px);
     border: solid 2px $cor-placeholder;
     border-radius: 15px;
     padding: 30px;
+    
 
     h2{
         text-align: center;
@@ -37,7 +38,7 @@
     }
 
     /*Formulário de criação de novos chamado*/
-    #formulario-criar{
+    #formulario-criar, #formulario-editar{
         @include display(flex, column, center, center,10px);
         width: 600px;
 
@@ -81,7 +82,7 @@
                 font-weight: bold;
             }
 
-            #cancelar-criacao{
+            #cancelar-criacao, #cancelar-edicao{
                 background-color: $cor-clara;
                 color: $cor-primaria;
                 border: solid 1px $cor-placeholder;
@@ -94,7 +95,7 @@
                 }
             }
 
-            #salvar-criacao{
+            #salvar-criacao, #atualizar-edicao{
                 background-color: $cor-primaria;
                 color: $cor-clara;
                 transition: .2s;

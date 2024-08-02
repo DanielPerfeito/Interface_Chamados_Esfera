@@ -74,22 +74,51 @@
             </div>
         </form>
     </section>
-
-    <section id="secao-editar" style="display:none;">
-        <h2>Editar Chamado</h2>
+    <!--Seção de edição de chamados-->
+    <section id="secao-editar" style="display: none;" >
+        <h2>Editar Chamado<i class="bi bi-pencil-square"></i></h2>
+        <span>OBS: Campos de preenchimento obrigatóra (*)</span>
+        <!--Formulário de edição de chamados-->
         <form id="formulario-editar">
-            <input type="text" id="campo-editar-assunto" placeholder="Assunto" required>
-            <textarea id="campo-editar-descricao" placeholder="Descrição" required></textarea>
-            <input type="text" id="campo-editar-local" placeholder="Local" required>
-            <select id="campo-editar-prioridade" required>
-                <option value="Baixa">Baixa</option>
-                <option value="Média">Média</option>
-                <option value="Alta">Alta</option>
-            </select>
-            <input type="file" id="campo-editar-anexo">
-            <input type="email" id="campo-editar-criado-por" placeholder="Criado por" required>
-            <button type="submit">Atualizar Chamado</button>
-            <button type="button" id="cancelar-edicao">Cancelar</button>
+            <!--Editar Assunto-->
+            <div class="div-campo-form">
+                <label for="campo-editar-assunto">Assunto<span>*</span></label>
+                <input type="text" id="campo-editar-assunto" class="form-control" placeholder="Assunto" required>
+            </div>
+            <!--Editar Descrição-->
+            <div class="div-campo-form">
+                <label for="campo-editar-descricao">Descrição<span>*</span></label>
+                <textarea id="campo-editar-descricao" class="form-control" placeholder="Descrição" required></textarea>
+            </div>
+            <!--Editar Local-->
+            <div class="div-campo-form">
+                <label for="campo-editar-local">Local<span>*</span></label>
+                <input type="text" id="campo-editar-local" class="form-control" placeholder="Local" required>
+            </div>
+            <!--Editar Prioridade-->
+            <div class="div-campo-form">
+                <label for="campo-editar-prioridade">Prioridade<span>*</span></label>
+                <select id="campo-editar-prioridade" class="form-control" required>
+                    <option value="Baixa">Baixa</option>
+                    <option value="Média">Média</option>
+                    <option value="Alta">Alta</option>
+                </select>
+            </div>
+            <!--Editar Anexo-->
+            <div class="div-campo-form">
+                <label for="campo-editar-anexo">Anexo</label>
+                <input type="file" id="campo-editar-anexo" class="form-control">
+            </div>
+            <!--Editar Email do solicitante-->
+            <div class="div-campo-form">
+                <label for="campo-editar-criado-por">Email do solicitante<span>*</span></label>
+                <input type="email" id="campo-editar-criado-por" class="form-control" placeholder="ex: solicitante@email.com" required>
+            </div>
+            <!--Botões/Submit-->
+            <div class="div-btn-form">
+                <button type="button" id="cancelar-edicao" class="btn">Cancelar</button>
+                <button type="submit" id="atualizar-edicao" class="btn">Atualizar <i class="bi bi-pencil-fill"></i></button>
+            </div>
         </form>
     </section>
 

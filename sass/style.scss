@@ -6,13 +6,26 @@
 @import "secao-visualizar.scss";
 @import "secao-lista.scss";
 
-
 /*Estilo base*/
 body{
-    @include display(flex, column, center, center, 30px);
+    background-image: url(../assets/back-opaco.png);
+    background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+
+     &::-webkit-scrollbar {
+        width: 15px;
+        background-color: $cor-placeholder-2;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $cor-placeholder;
+        
+    }
 
     main{
         @include display(flex, column, center, center, 30px);
         padding: 15px;
+     
     }
 }

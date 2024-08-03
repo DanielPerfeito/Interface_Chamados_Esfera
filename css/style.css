@@ -45,6 +45,7 @@
   width: 100%;
   background-color: #54668e;
   padding: 30px;
+  box-shadow: 3px 3px 3px #808080;
   /*Imagem Logo*/
   /*Div do Token*/
 }
@@ -148,6 +149,7 @@
   background-color: #f29a41;
   color: #ffffff;
   border: solid 3px #f29a41;
+  box-shadow: 3px 3px 3px #808080;
   border-radius: 10px;
   font-size: 1.5rem;
   font-weight: bold;
@@ -165,8 +167,10 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+  background-color: #ffffff;
   border: solid 2px rgba(84, 102, 142, 0.4431372549);
   border-radius: 15px;
+  box-shadow: 3px 3px 3px #808080;
   padding: 30px;
   /*Formulários*/
 }
@@ -273,6 +277,37 @@
 #secao-editar #formulario-editar .div-campo-form textarea option {
   color: #3a4675;
 }
+#secao-criar #formulario-criar .div-campo-form input::-webkit-scrollbar,
+#secao-criar #formulario-criar .div-campo-form select::-webkit-scrollbar,
+#secao-criar #formulario-criar .div-campo-form textarea::-webkit-scrollbar,
+#secao-criar #formulario-editar .div-campo-form input::-webkit-scrollbar,
+#secao-criar #formulario-editar .div-campo-form select::-webkit-scrollbar,
+#secao-criar #formulario-editar .div-campo-form textarea::-webkit-scrollbar,
+#secao-editar #formulario-criar .div-campo-form input::-webkit-scrollbar,
+#secao-editar #formulario-criar .div-campo-form select::-webkit-scrollbar,
+#secao-editar #formulario-criar .div-campo-form textarea::-webkit-scrollbar,
+#secao-editar #formulario-editar .div-campo-form input::-webkit-scrollbar,
+#secao-editar #formulario-editar .div-campo-form select::-webkit-scrollbar,
+#secao-editar #formulario-editar .div-campo-form textarea::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgba(84, 102, 142, 0.1725490196);
+  border-radius: 3px;
+}
+#secao-criar #formulario-criar .div-campo-form input::-webkit-scrollbar-thumb,
+#secao-criar #formulario-criar .div-campo-form select::-webkit-scrollbar-thumb,
+#secao-criar #formulario-criar .div-campo-form textarea::-webkit-scrollbar-thumb,
+#secao-criar #formulario-editar .div-campo-form input::-webkit-scrollbar-thumb,
+#secao-criar #formulario-editar .div-campo-form select::-webkit-scrollbar-thumb,
+#secao-criar #formulario-editar .div-campo-form textarea::-webkit-scrollbar-thumb,
+#secao-editar #formulario-criar .div-campo-form input::-webkit-scrollbar-thumb,
+#secao-editar #formulario-criar .div-campo-form select::-webkit-scrollbar-thumb,
+#secao-editar #formulario-criar .div-campo-form textarea::-webkit-scrollbar-thumb,
+#secao-editar #formulario-editar .div-campo-form input::-webkit-scrollbar-thumb,
+#secao-editar #formulario-editar .div-campo-form select::-webkit-scrollbar-thumb,
+#secao-editar #formulario-editar .div-campo-form textarea::-webkit-scrollbar-thumb {
+  background-color: #3a4675;
+  border-radius: 3px;
+}
 #secao-criar #formulario-criar .div-btn-form,
 #secao-criar #formulario-editar .div-btn-form,
 #secao-editar #formulario-criar .div-btn-form,
@@ -367,6 +402,7 @@
   padding: 30px;
   border: solid 2px rgba(84, 102, 142, 0.4431372549);
   border-radius: 15px;
+  box-shadow: 3px 3px 3px #808080;
   /*Area de exibição dos detalhes do chamado*/
   /*Div do botões/submit*/
 }
@@ -459,9 +495,11 @@
   justify-content: center;
   align-items: center;
   gap: 15px;
+  background-color: #ffffff;
   padding: 30px;
   border: solid 2px rgba(84, 102, 142, 0.4431372549);
   border-radius: 15px;
+  box-shadow: 3px 3px 3px #808080;
   padding: 30px;
   width: 100%;
   /*Lista de chamados*/
@@ -473,6 +511,7 @@
 #secao-lista #lista-chamados {
   max-height: 300px;
   overflow-y: auto;
+  width: 100%;
   /*Barra de rolagem*/
   /*Linhas da lista*/
 }
@@ -515,11 +554,17 @@
 
 /*Estilo base*/
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
+  background-image: url(../assets/back-opaco.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body::-webkit-scrollbar {
+  width: 15px;
+  background-color: rgba(84, 102, 142, 0.1725490196);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(84, 102, 142, 0.4431372549);
 }
 body main {
   display: flex;

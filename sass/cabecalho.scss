@@ -9,6 +9,7 @@
     width: 100%;
     background-color: $cor-primaria;
     padding: 30px;
+    box-shadow: 3px 3px 3px $cor-sombra-caixa;
 
     @media screen and (max-width: 760px) {
         @include display(flex, column, center, center, 5px);

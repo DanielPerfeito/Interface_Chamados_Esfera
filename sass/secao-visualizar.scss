@@ -11,6 +11,7 @@
     padding: 30px;
     border: solid 2px $cor-placeholder;
     border-radius: 15px;
+    box-shadow: 3px 3px 3px $cor-sombra-caixa;
 
     @media screen and (max-width:760px) {
         width: 100%;
@@ -47,7 +48,7 @@
             }
         }
     }
-    
+
     /*Div do botões/submit*/
     #div-btn-visualizar {
         @include display (flex, row, center, center, 10px);

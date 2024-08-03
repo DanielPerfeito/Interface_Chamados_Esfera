@@ -6,9 +6,11 @@
 /*Área da lista de chamados*/
 #secao-lista {
     @include display (flex, column, center, center, 15px);
+    background-color: $cor-clara;
     padding: 30px;
     border: solid 2px $cor-placeholder;
     border-radius: 15px;
+    box-shadow: 3px 3px 3px $cor-sombra-caixa;
     padding: 30px;
     width: 100%;
 
@@ -21,6 +23,7 @@
     #lista-chamados {
         max-height: 300px;
         overflow-y: auto;
+        width: 100%;
 
         /*Barra de rolagem*/
         &::-webkit-scrollbar {

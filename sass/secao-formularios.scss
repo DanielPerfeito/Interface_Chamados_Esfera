@@ -8,6 +8,7 @@
     background-color: $cor-call-to-action;
     color: $cor-clara;
     border: solid 3px $cor-call-to-action;
+    box-shadow: 3px 3px 3px $cor-sombra-caixa;
     border-radius: 10px;
     font-size: 1.5rem;
     font-weight: bold;
@@ -22,8 +23,10 @@
 #secao-criar,
 #secao-editar {
     @include display(flex, column, center, center, 10px);
+    background-color: $cor-clara;
     border: solid 2px $cor-placeholder;
     border-radius: 15px;
+    box-shadow: 3px 3px 3px $cor-sombra-caixa;
     padding: 30px;
 
     @media screen and (max-width: 400px) {
@@ -73,6 +76,17 @@
 
                 option {
                     color: $cor-secundaria
+                }
+
+                &::-webkit-scrollbar {
+                    width: 10px;
+                    background-color: $cor-placeholder-2;
+                    border-radius: 3px;
+                }
+        
+                &::-webkit-scrollbar-thumb {
+                    background-color: $cor-secundaria;
+                    border-radius: 3px
                 }
             }
         }

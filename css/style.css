@@ -337,6 +337,73 @@
   border: none;
 }
 
+/*SEÇÃO LISTA DE CHAMADOS*/
+/*Imports Necessários*/
+/*ESTILOS COMUNS*/
+/*Imports necessário*/
+/*Variáves*/
+/*Gerais*/
+*, p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Área da lista de chamados*/
+#secao-lista {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 30px;
+  border: solid 2px rgba(84, 102, 142, 0.4431372549);
+  border-radius: 15px;
+  padding: 30px;
+  width: 80%;
+  /*Lista de chamados*/
+}
+#secao-lista h2 {
+  color: #3a4675;
+}
+#secao-lista #lista-chamados {
+  max-height: 300px;
+  overflow-y: auto;
+  /*Barra de rolagem*/
+  /*Linhas da lista*/
+}
+#secao-lista #lista-chamados::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgba(84, 102, 142, 0.1725490196);
+  border-radius: 3px;
+}
+#secao-lista #lista-chamados::-webkit-scrollbar-thumb {
+  background-color: #3a4675;
+  border-radius: 3px;
+}
+#secao-lista #lista-chamados li {
+  list-style: none;
+  position: relative;
+  overflow: hidden;
+  border-bottom: solid 1px rgba(84, 102, 142, 0.4431372549);
+  padding: 5px 35px 5px 35px;
+  color: #3a4675;
+  font-size: 1.2rem;
+  cursor: pointer;
+  /*Icone da linha da lista*/
+}
+#secao-lista #lista-chamados li:hover {
+  background-color: rgba(84, 102, 142, 0.1725490196);
+}
+#secao-lista #lista-chamados li::before {
+  content: "\f341";
+  font-family: "bootstrap-icons";
+  position: absolute;
+  left: 5px;
+  top: 4px;
+  font-size: 1.2em;
+}
+
 /*Estilo base*/
 body {
   display: flex;

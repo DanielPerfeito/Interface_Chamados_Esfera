@@ -1,6 +1,6 @@
 // backend.js
 
-const token = 'fb935631-4684-4e8c-b751-ef2e3288f568';
+const token = '0e506558-9f8c-4147-8962-33b5ecd1b14f';
 
 // Função para buscar a lista de chamados
 function buscarChamados() {

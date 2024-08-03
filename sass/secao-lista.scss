@@ -1,0 +1,62 @@
+/*SEÇÃO LISTA DE CHAMADOS*/
+
+/*Imports Necessários*/
+@import "comuns.scss";
+
+/*Área da lista de chamados*/
+#secao-lista {
+    @include display (flex, column, center, center, 15px);
+    padding: 30px;
+    border: solid 2px $cor-placeholder;
+    border-radius: 15px;
+    padding: 30px;
+    width: 80%;
+
+    h2 {
+        color: $cor-secundaria;
+    }
+
+    /*Lista de chamados*/
+    #lista-chamados {
+        max-height: 300px;
+        overflow-y: auto;
+
+        /*Barra de rolagem*/
+        &::-webkit-scrollbar {
+            width: 10px;
+            background-color: $cor-placeholder-2;
+            border-radius: 3px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $cor-secundaria;
+            border-radius: 3px
+        }
+
+        /*Linhas da lista*/
+        li {
+            list-style: none;
+            position: relative;
+            overflow: hidden;
+            border-bottom: solid 1px $cor-placeholder;
+            padding: 5px 35px 5px 35px;
+            color: $cor-secundaria;
+            font-size: 1.2rem;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $cor-placeholder-2;
+            }
+
+            /*Icone da linha da lista*/
+            &::before {
+                content: '\F341';
+                font-family: 'bootstrap-icons';
+                position: absolute;
+                left: 5px;
+                top: 4px;
+                font-size: 1.2em;
+            }
+        }
+    }
+}

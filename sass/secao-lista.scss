@@ -10,10 +10,11 @@
     border: solid 2px $cor-placeholder;
     border-radius: 15px;
     padding: 30px;
-    width: 80%;
+    width: 100%;
 
     h2 {
         color: $cor-secundaria;
+        text-align: center;
     }
 
     /*Lista de chamados*/
@@ -46,6 +47,10 @@
 
             &:hover {
                 background-color: $cor-placeholder-2;
+            }
+
+            @media screen and (max-width:400px){
+                font-size: 1rem;
             }
 
             /*Icone da linha da lista*/

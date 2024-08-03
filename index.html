@@ -12,144 +12,145 @@
 </head>
 
 <body>
-    <!--Cabeçalho-->
-    <header id="cabecalho">
-        <!--Imagem - Logo-->
-        <img src="assets/logo_esfera_branca_final.png" alt="Logo da Esfera Solutions">
-        <!--Titulo principal-->
-        <h1>Gerenciamento de Chamados</h1>
-        <!--Área do token-->
-        <div id="div-token">
-            <p id="label-token"><i class="bi bi-key-fill"> </i>Token:</p>
-            <p id="token">0e506558-9f8c-4147-8962-33b5ecd1b14f</p>
-        </div>
-    </header>
-
-    <!--Botão para abrir o formulário de criação de novos chamados-->
-    <button id="mostrar-formulario-criar" class="btn">Novo Chamado <i class="bi bi-clipboard-plus"></i></button>
-
-    <!--Seção de criação de novos chamados-->
-    <section id="secao-criar" style="display: none">
-        <h2 class="">Criar Chamado <i class="bi bi-clipboard-fill"></i></h2>
-        <span>OBS: Campos de preenchimento obrigatóra (*)</span>
-        <!--Formulário de criação de novos chamados-->
-        <form id="formulario-criar">
-            <!--Assunto-->
-            <div class="div-campo-form">
-                <label for="campo-assunto">Assunto<span>*</span></label>
-                <input type="text" id="campo-assunto" class="form-control"  placeholder="ex: Servidor Inoperante" required>
-            </div>
-            <!--Descrição-->
-            <div class="div-campo-form">
-                <label for="campo-descricao">Descrição<span>*</span></label>
-                <textarea id="campo-descricao" class="form-control"  placeholder="ex: O servidor encontra-se offline desde ontem." required></textarea>
-            </div>
-            <!--Local-->
-            <div class="div-campo-form">
-                <label for="campo-local">Local<span>*</span></label>
-                <input type="text" id="campo-local" class="form-control"  placeholder="ex: Sala de servidores" required>
-            </div>
-            <!--Prioridade-->
-            <div class="div-campo-form">
-                <label for="campo-prioridade">Prioridade<span>*</span></label>
-                <select id="campo-prioridade" class="form-control"  required>
-                    <option value="Baixa">Baixa</option>
-                    <option value="Média">Média</option>
-                    <option value="Alta">Alta</option>
-                </select>
-            </div>
-            <!--Anexo-->
-            <div class="div-campo-form">
-                <label for="campo-anexo">Anexo</label>
-                <input type="file" id="campo-anexo" class="form-control">
-            </div>
-            <!--Email-->
-            <div class="div-campo-form">
-                <label for="campo-criado-por">Email do solicitante<span>*</span></label>
-                <input type="email" id="campo-criado-por" class="form-control"  placeholder="ex: solicitante@email.com" required>
-            </div>
-            <!--Botões/Submit-->
-            <div class="div-btn-form">
-                <button id="cancelar-criacao" class="btn" type="button" >Cancelar</button>
-                <button id="salvar-criacao" class="btn" type="submit">Salvar <i class="bi bi-floppy2-fill"></i></button>
-            </div>
-        </form>
-    </section>
-
-    <!--Seção de edição de chamados-->
-    <section id="secao-editar" style="display: none;" >
-        <h2>Editar Chamado <i class="bi bi-pencil-fill"></i></h2>
-        <span>OBS: Campos de preenchimento obrigatóra (*)</span>
-        <!--Formulário de edição de chamados-->
-        <form id="formulario-editar">
-            <!--Editar Assunto-->
-            <div class="div-campo-form">
-                <label for="campo-editar-assunto">Assunto<span>*</span></label>
-                <input type="text" id="campo-editar-assunto" class="form-control" placeholder="Assunto" required>
-            </div>
-            <!--Editar Descrição-->
-            <div class="div-campo-form">
-                <label for="campo-editar-descricao">Descrição<span>*</span></label>
-                <textarea id="campo-editar-descricao" class="form-control" placeholder="Descrição" required></textarea>
-            </div>
-            <!--Editar Local-->
-            <div class="div-campo-form">
-                <label for="campo-editar-local">Local<span>*</span></label>
-                <input type="text" id="campo-editar-local" class="form-control" placeholder="Local" required>
-            </div>
-            <!--Editar Prioridade-->
-            <div class="div-campo-form">
-                <label for="campo-editar-prioridade">Prioridade<span>*</span></label>
-                <select id="campo-editar-prioridade" class="form-control" required>
-                    <option value="Baixa">Baixa</option>
-                    <option value="Média">Média</option>
-                    <option value="Alta">Alta</option>
-                </select>
-            </div>
-            <!--Editar Anexo-->
-            <div class="div-campo-form">
-                <label for="campo-editar-anexo">Anexo</label>
-                <input type="file" id="campo-editar-anexo" class="form-control">
-            </div>
-            <!--Editar Email do solicitante-->
-            <div class="div-campo-form">
-                <label for="campo-editar-criado-por">Email do solicitante<span>*</span></label>
-                <input type="email" id="campo-editar-criado-por" class="form-control" placeholder="ex: solicitante@email.com" required>
-            </div>
-            <!--Botões/Submit-->
-            <div class="div-btn-form">
-                <button type="button" id="cancelar-edicao" class="btn">Cancelar</button>
-                <button type="submit" id="atualizar-edicao" class="btn">Atualizar <i class="bi bi-check"></i></button>
-            </div>
-        </form>
-    </section>
-
-    <!--Seção de visualização de detalhes dos chamados-->
-    <section id="secao-visualizar" style="display: none;">
-        <h2>Detalhes do Chamado <i class="bi bi-search"></i></h2>
-        <!--Área onde os detalhes do chamado serão exibidos-->
-        <div id="detalhes-visualizar"></div>
-        <!--Div dos botões-->
-        <div id="div-btn-visualizar">
-            <!--Botão para fechar visualização de detalhes-->
-            <button class="btn btn-fechar" onclick="fecharVisualizacao()">Fechar</button>
-            <!--Div do botão de editar-->
-            <div id="div-btn-visualizar-editar">
-            </div>
-        </div>
-    </section>
     
-    <!--Seção da lista de chamados-->
-    <section id="secao-lista">
-        <h2>Lista de Chamados <i class="bi bi-card-list"></i></h2>
-        <!--Lista de chamados-->
-        <ul id="lista-chamados"></ul>
-        <p id="mensagem-erro"></p>
-    </section>
+        <!--Cabeçalho-->
+        <header id="cabecalho">
+            <!--Imagem - Logo-->
+            <img src="assets/logo_esfera_branca_final.png" alt="Logo da Esfera Solutions">
+            <!--Titulo principal-->
+            <h1>Gerenciamento de Chamados</h1>
+            <!--Área do token-->
+            <div id="div-token">
+                <p id="label-token"><i class="bi bi-key-fill"> </i>Token:</p>
+                <p id="token">0e506558-9f8c-4147-8962-33b5ecd1b14f</p>
+            </div>
+        </header>
 
-    <!--Scripts-->
-    <script src="js/scripts.js"></script>
-    <script src="js/backend.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+         <main>
+             <!--Botão para abrir o formulário de criação de novos chamados-->
+             <button id="mostrar-formulario-criar" class="btn">Novo Chamado <i class="bi bi-clipboard-plus"></i></button>
+             <!--Seção de criação de novos chamados-->
+             <section id="secao-criar" style="display: none">
+                 <h2 class="">Criar Chamado <i class="bi bi-clipboard-fill"></i></h2>
+                 <span>OBS: Campos de preenchimento obrigatóra (*)</span>
+                 <!--Formulário de criação de novos chamados-->
+                 <form id="formulario-criar">
+                     <!--Assunto-->
+                     <div class="div-campo-form">
+                         <label for="campo-assunto">Assunto<span>*</span></label>
+                         <input type="text" id="campo-assunto" class="form-control"  placeholder="ex: Servidor Inoperante" required>
+                     </div>
+                     <!--Descrição-->
+                     <div class="div-campo-form">
+                         <label for="campo-descricao">Descrição<span>*</span></label>
+                         <textarea id="campo-descricao" class="form-control"  placeholder="ex: O servidor encontra-se offline desde ontem." required></textarea>
+                     </div>
+                     <!--Local-->
+                     <div class="div-campo-form">
+                         <label for="campo-local">Local<span>*</span></label>
+                         <input type="text" id="campo-local" class="form-control"  placeholder="ex: Sala de servidores" required>
+                     </div>
+                     <!--Prioridade-->
+                     <div class="div-campo-form">
+                         <label for="campo-prioridade">Prioridade<span>*</span></label>
+                         <select id="campo-prioridade" class="form-control"  required>
+                             <option value="Baixa">Baixa</option>
+                             <option value="Média">Média</option>
+                             <option value="Alta">Alta</option>
+                         </select>
+                     </div>
+                     <!--Anexo-->
+                     <div class="div-campo-form">
+                         <label for="campo-anexo">Anexo</label>
+                         <input type="file" id="campo-anexo" class="form-control">
+                     </div>
+                     <!--Email-->
+                     <div class="div-campo-form">
+                         <label for="campo-criado-por">Email do solicitante<span>*</span></label>
+                         <input type="email" id="campo-criado-por" class="form-control"  placeholder="ex: solicitante@email.com" required>
+                     </div>
+                     <!--Botões/Submit-->
+                     <div class="div-btn-form">
+                         <button id="cancelar-criacao" class="btn" type="button" >Cancelar</button>
+                         <button id="salvar-criacao" class="btn" type="submit">Salvar <i class="bi bi-floppy2-fill"></i></button>
+                     </div>
+                 </form>
+             </section>
+             <!--Seção de edição de chamados-->
+             <section id="secao-editar" style="display: none;" >
+                 <h2>Editar Chamado <i class="bi bi-pencil-fill"></i></h2>
+                 <span>OBS: Campos de preenchimento obrigatóra (*)</span>
+                 <!--Formulário de edição de chamados-->
+                 <form id="formulario-editar">
+                     <!--Editar Assunto-->
+                     <div class="div-campo-form">
+                         <label for="campo-editar-assunto">Assunto<span>*</span></label>
+                         <input type="text" id="campo-editar-assunto" class="form-control" placeholder="Assunto" required>
+                     </div>
+                     <!--Editar Descrição-->
+                     <div class="div-campo-form">
+                         <label for="campo-editar-descricao">Descrição<span>*</span></label>
+                         <textarea id="campo-editar-descricao" class="form-control" placeholder="Descrição" required></textarea>
+                     </div>
+                     <!--Editar Local-->
+                     <div class="div-campo-form">
+                         <label for="campo-editar-local">Local<span>*</span></label>
+                         <input type="text" id="campo-editar-local" class="form-control" placeholder="Local" required>
+                     </div>
+                     <!--Editar Prioridade-->
+                     <div class="div-campo-form">
+                         <label for="campo-editar-prioridade">Prioridade<span>*</span></label>
+                         <select id="campo-editar-prioridade" class="form-control" required>
+                             <option value="Baixa">Baixa</option>
+                             <option value="Média">Média</option>
+                             <option value="Alta">Alta</option>
+                         </select>
+                     </div>
+                     <!--Editar Anexo-->
+                     <div class="div-campo-form">
+                         <label for="campo-editar-anexo">Anexo</label>
+                         <input type="file" id="campo-editar-anexo" class="form-control">
+                     </div>
+                     <!--Editar Email do solicitante-->
+                     <div class="div-campo-form">
+                         <label for="campo-editar-criado-por">Email do solicitante<span>*</span></label>
+                         <input type="email" id="campo-editar-criado-por" class="form-control" placeholder="ex: solicitante@email.com" required>
+                     </div>
+                     <!--Botões/Submit-->
+                     <div class="div-btn-form">
+                         <button type="button" id="cancelar-edicao" class="btn">Cancelar</button>
+                         <button type="submit" id="atualizar-edicao" class="btn">Atualizar <i class="bi bi-check"></i></button>
+                     </div>
+                 </form>
+             </section>
+             <!--Seção de visualização de detalhes dos chamados-->
+             <section id="secao-visualizar" style="display: none;">
+                 <h2>Detalhes do Chamado <i class="bi bi-search"></i></h2>
+                 <!--Área onde os detalhes do chamado serão exibidos-->
+                 <div id="detalhes-visualizar"></div>
+                 <!--Div dos botões-->
+                 <div id="div-btn-visualizar">
+                     <!--Botão para fechar visualização de detalhes-->
+                     <button class="btn btn-fechar" onclick="fecharVisualizacao()">Fechar</button>
+                     <!--Div do botão de editar-->
+                     <div id="div-btn-visualizar-editar">
+                     </div>
+                 </div>
+             </section>
+             
+             <!--Seção da lista de chamados-->
+             <section id="secao-lista">
+                 <h2>Lista de Chamados <i class="bi bi-card-list"></i></h2>
+                 <!--Lista de chamados-->
+                 <ul id="lista-chamados"></ul>
+                 <p id="mensagem-erro"></p>
+             </section>
+             <!--Scripts-->
+             <script src="js/scripts.js"></script>
+             <script src="js/backend.js"></script>
+             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+         </main>
+        
 </body>
 </html>

@@ -142,6 +142,7 @@ function atualizarChamado(id, assunto, descricao, local, prioridade, anexo) {
         console.log('Chamado atualizado:', result);
         carregarChamados();
         document.getElementById('secao-editar').style.display = 'none';
+        document.getElementById('mostrar-formulario-criar').style.display = 'block';
     })
     .catch(error => console.error('Error:', error));
 }

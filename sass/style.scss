@@ -10,4 +10,9 @@
 /*Estilo base*/
 body{
     @include display(flex, column, center, center, 30px);
+
+    main{
+        @include display(flex, column, center, center, 30px);
+        padding: 15px;
+    }
 }

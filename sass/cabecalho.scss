@@ -4,64 +4,80 @@
 @import "comuns.scss";
 
 /*Área do cabeçalho*/
-#cabecalho{
+#cabecalho {
     @include display (flex, row, center, center, 50px);
     width: 100%;
     background-color: $cor-primaria;
-    padding: 15px;
+    padding: 30px;
 
-    @media screen and (max-width: 760px){
+    @media screen and (max-width: 760px) {
         @include display(flex, column, center, center, 5px);
         padding: 10px;
     }
+
     /*Imagem Logo*/
-    img{
+    img {
         width: 200px;
         border-right: solid 4px $cor-clara;
         padding-right: 30px;
 
         @media screen and (max-width: 760px) {
-           border:none;
+            border: none;
+
         }
+
+        
     }
 
-    h1{
+    h1 {
         color: $cor-clara;
-        @media screen and (max-width: 760px){
+        text-align: center;
+
+        @media screen and (max-width: 760px) {
             font-size: 1.6rem;
             border-top: solid 4px $cor-clara;
             padding-top: 10px;
         }
+
+        @media screen and (max-width: 400px) {
+            font-size: 1.3rem;
+            
+        }
     }
-    
+
     /*Div do Token*/
-    #div-token{
+    #div-token {
         @include display (flex, column, center, start, 5px);
         font-weight: bold;
 
-        @media screen and (max-width:760px){
+        @media screen and (max-width:760px) {
             @include display (flex, row, center, center, 10px);
         }
 
-        #label-token{
+        @media screen and (max-width: 400px) {
+            @include display (flex, column, center, center, 5px);
+            
+        }
+
+        #label-token {
             color: $cor-clara;
 
-            @media screen and (max-width:760px){
-              font-size: .9rem;
+            @media screen and (max-width:760px) {
+                font-size: .9rem;
             }
         }
 
-        #token{
+        #token {
             color: $cor-escura;
             background-color: $cor-clara;
             padding: 5px 8px;
             border-radius: 5px;
             box-shadow: inset 2px 2px 3px $cor-escura;
 
-            @media screen and (max-width:760px){
+            @media screen and (max-width:760px) {
                 font-size: .9rem;
-              }
+            }
         }
-    
+
     }
 }

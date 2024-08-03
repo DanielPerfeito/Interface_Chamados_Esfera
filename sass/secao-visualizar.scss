@@ -13,7 +13,7 @@
     border-radius: 15px;
 
     @media screen and (max-width:760px) {
-        width: 400px;
+        width: 100%;
     }
 
     h2 {
@@ -22,7 +22,7 @@
         color: $cor-secundaria;
 
         @media screen and (max-width:760px) {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
         }
     }
 
@@ -47,6 +47,7 @@
             }
         }
     }
+    
     /*Div do botões/submit*/
     #div-btn-visualizar {
         @include display (flex, row, center, center, 10px);
@@ -63,11 +64,12 @@
                 color: $cor-secundaria;
                 border: none;
             }
-
         }
+
         /*Div do botão editar*/
         #div-btn-visualizar-editar {
             width: 50%;
+
             /*Botão para editar os detalhes de um chamado*/
             .btn-editar {
                 width: 100%;
